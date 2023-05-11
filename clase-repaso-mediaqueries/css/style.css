@@ -69,10 +69,16 @@ main{
     align-items: center;
 }
 .hero{
-    width: 70%;
+    width: 80%;
+    display: flex;
+}
+.heroText{
+
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+}
+.heroImgContainer{
+    display: none;
 }
 
 h1{
@@ -124,12 +130,38 @@ footer .follow {
 .copyright{
     font-size: 0.8rem;
 }
+
+.serviceCard h2{
+    display: none;
+}
 /* @media  screen and (max-width: 1000px) {
     body{
         background-color: aqua;
     }
 } */
-@media screen and (min-width: 750px){
+@media screen and (min-width: 500px){
+    html{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1000px){
+    .heroImgContainer{
+        display: flex;
+        justify-content: center;
+        flex: 2;
+    }
+    .heroText{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .heroImgContainer img{
+        width: 100%;
+    }
+    html{
+        font-size: 20px;
+    }
     .header-controls{
         display: flex;
         gap: 3vw;
@@ -150,9 +182,69 @@ footer .follow {
         display: none;
 
     }
+    .services{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3vh 10%;
+    }
+    .serviceCard{
+        height: 23rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 15rem;
+    }
+    .serviceCard p{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        /* order: 1; */
+    }
+    .serviceCardImgContainer{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        /* order: 2; */
+    }
 }
-@media screen and (min-width: 1000px){
-    body{
-        background-color: rgb(141, 141, 255);
+
+@media screen and (min-width: 1300px){
+    h1{
+        font-size: 3rem;
+    }
+    .hero{
+        min-height: 80vh;
+    }
+    html{
+        font-size: 22px;
+    }
+    .heroImgContainer{
+        flex: 1;
+    }
+    .heroImgContainer img{
+        width: 100%;
+    }
+    .heroText{
+        flex: 1;
+        padding-right: 15vw;
+        gap: 7vh;
+    }
+    .heroText p{
+        font-size: 1.5rem;
+    }
+    .serviceCard h2{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .serviceCard{
+        width: 30%;
+        height: 80vh;
+    }
+}
+@media screen and (min-width: 1600px){
+    html{
+        font-size: 30px;
     }
 }
