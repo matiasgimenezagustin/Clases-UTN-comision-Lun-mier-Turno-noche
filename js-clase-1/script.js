@@ -27,3 +27,26 @@ undefined
 null
 
 /* console.log('hola') */
+
+
+//Operadores Aritmeticos
+
+//+ 
+// Se suma algo con un string
+
+
+
+//Siempre devuelven un numero
+//- * / %
+
+/* 7 - 9
+true * 9  */
+
+
+//COMPARADORES => Se necesitan a dos para funcionar, siempre devuelven Boolean
+
+//==
+//===
+//!=
+//!==
+//>, <, =<
