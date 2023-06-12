@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        #contenedor{
+            background-color: blueviolet;
+            color: white;
+            min-height: 100vh;
+        }
+        .m-max{
+            margin-bottom: 100vh;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        .m{
+            margin-bottom: 200px;
+        }
+        .code{
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: monospace;
+        }
+        .sectionHeader{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .sectionHeader button{
+            height: 30px;
+        }
+        .categorias{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            
+        }
+        .categoria{
+            background-color: rgba(0, 0, 0, 0.154);
+            padding: 10px;
+            border-radius: 2px;
+            width: 120px;
+            text-align: center;
+        }
+        .btn{
+            background-color: rgba(0, 0, 0, 0.154);
+            padding: 10px;
+            border-radius: 2px;
+            border: none;
+            width: 50px;
+        }
+        .productDetail{
+            display: flex;
+            width: 750px;
+            margin: auto;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.161);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .productDetail .productDetailInfo{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tutoria JS</h1>
+
+    <h2>Consigna 1:</h2>
+    <p>Dado el siguiente array debera renderizarse por cada elemento esta carta: </p>
+    <div class="code">
+        const productosPC = [
+  {
+    precio: 999,
+    descripcion: "Portátil de alta gama con procesador Intel Core i7 y tarjeta gráfica NVIDIA GeForce RTX 3080.",
+    titulo: "Portátil Gaming"
+  },
+  {
+    precio: 799,
+    descripcion: "Ordenador de escritorio con procesador AMD Ryzen 7 y tarjeta gráfica AMD Radeon RX 6700 XT.",
+    titulo: "Ordenador de Escritorio"
+  },
+  {
+    precio: 249,
+    descripcion: "Monitor de 24 pulgadas Full HD con tecnología IPS y tiempo de respuesta de 1 ms.",
+    titulo: "Monitor"
+  },
+  {
+    precio: 129,
+    descripcion: "Teclado mecánico RGB con interruptores Cherry MX y diseño compacto.",
+    titulo: "Teclado"
+  },
+  {
+    precio: 79,
+    descripcion: "Ratón inalámbrico ergonómico con sensor óptico de alta precisión y 6 botones programables.",
+    titulo: "Ratón"
+  }
+];
+
+    </div>
+    <div>
+        <h2>Titulo</h2>
+        <span>Precio: $000</span>
+        <p>Es un muy buen producto</p>
+        <button>Comprar</button>
+        <hr>
+    </div>
+    <br class="m">
+    <h2>Consigna 2:</h2>
+    <p>Una vez renderizada la lista veremos que ocupa mucho espacio en la pantalla, por lo que haremos un button que dira <i>ocultar</i> que al hacerle click ocultara la lista y cambiara el texto de <i>ocultar</i> a <i>mostrar</i></p>
+    <button>Ocultar</button>
+    <hr>
+    <br class="m">
+    <h2>Consigna 3:</h2>
+    <p>Ahora nuestro sitio web crece, y tendremos mas de una lista que renderizar. Tenemos un nuevo formato de array que es el siguiente: </p>
+    <div class="code">
+        const lists = [
+  {
+    titulo: "Recomendados para ti",
+    data: [
+      {
+        precio: 999,
+        descripcion: "Portátil de alta gama con procesador Intel Core i7 y tarjeta gráfica NVIDIA GeForce RTX 3080.",
+        titulo: "Portátil Gaming"
+      },
+      {
+        precio: 249,
+        descripcion: "Monitor de 24 pulgadas Full HD con tecnología IPS y tiempo de respuesta de 1 ms.",
+        titulo: "Monitor"
+      }
+    ]
+  },
+  {
+    titulo: "Basados en tu búsqueda",
+    data: [
+      {
+        precio: 799,
+        descripcion: "Ordenador de escritorio con procesador AMD Ryzen 7 y tarjeta gráfica AMD Radeon RX 6700 XT.",
+        titulo: "Ordenador de Escritorio"
+      },
+      {
+        precio: 129,
+        descripcion: "Teclado mecánico RGB con interruptores Cherry MX y diseño compacto.",
+        titulo: "Teclado"
+      },
+      {
+        precio: 79,
+        descripcion: "Ratón inalámbrico ergonómico con sensor óptico de alta precisión y 6 botones programables.",
+        titulo: "Ratón"
+      }
+    ]
+  },
+  {
+    titulo: "Ofertas especiales",
+    data: [
+      {
+        precio: 199,
+        descripcion: "Tablet con pantalla de 10 pulgadas, 128 GB de almacenamiento y sistema operativo Android.",
+        titulo: "Tablet"
+      },
+      {
+        precio: 49,
+        descripcion: "Auriculares inalámbricos con cancelación de ruido y batería de larga duración.",
+        titulo: "Auriculares"
+      }
+    ]
+  }
+];
+
+    </div>
+    <p>Ahora el nuevo formato de nuestra pagina sera el siguiente:</p>
+    <div>
+        
+        <div>
+            <div class="sectionHeader">
+                <h2><u>Recomendados para ti</u></h2>
+                <button>ocultar</button>
+            </div>
+            
+            <div>
+                <div>
+                    <h2>Titulo</h2>
+                    <span>Precio: $000</span>
+                    <p>Es un muy buen producto</p>
+                    <button>Comprar</button>
+                    <hr>
+                </div>
+                <div>
+                    <h2>Titulo</h2>
+                    <span>Precio: $000</span>
+                    <p>Es un muy buen producto</p>
+                    <button>Comprar</button>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="sectionHeader">
+                <h2><u>En oferta:</u></h2>
+                <button>ocultar</button>
+            </div>
+            <div>
+                <div>
+                    <h2>Titulo</h2>
+                    <span>Precio: $000</span>
+                    <p>Es un muy buen producto</p>
+                    <button>Comprar</button>
+                    <hr>
+                </div>
+                <div>
+                    <h2>Titulo</h2>
+                    <span>Precio: $000</span>
+                    <p>Es un muy buen producto</p>
+                    <button>Comprar</button>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="m">
+    <h2>Consigna 4:</h2>
+    <div class="code">
+        const productDetail ={
+            title: 'remera negra',
+            img:'https://www.cottonclub.com.ar/pub/media/catalog/product/cache/65e2670acbf1788249a95924f3789a80/1/1/1100_negra_copia.jpg',
+            categorias:[
+                'para hombres',
+                'indumentaria',
+                'remeras'
+            ], 
+            precio: 3000,
+            descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio quas tenetur enim error ut? Similique ducimus, repudiandae nemo earum sint, distinctio delectus temporibus possimus autem, aut odio quasi amet nihil!'
+        }
+    </div>
+    <p>Dado el codigo tenemos la carta del detalle de un producto que tiene el siguiente formato: </p>
+
+    <div class="productDetail">
+        <div>
+            <h2>Titulo</h2>
+            <img src="https://www.cottonclub.com.ar/pub/media/catalog/product/cache/65e2670acbf1788249a95924f3789a80/1/1/1100_negra_copia.jpg" alt="" width="300px">
+        </div>
+        <div class="productDetailInfo">
+            <p><b>Descripcion:</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio quas tenetur enim error ut? Similique ducimus, repudiandae nemo earum sint, distinctio delectus temporibus possimus autem, aut odio quasi amet nihil!</p>
+            <span><b>Price:</b> $3500</span>
+            <span><b>Categorias:</b></span>
+            <div class="categorias">
+                <span class='categoria'>Ropa</span>
+                <span class='categoria'>Indumentaria</span>
+                <span class='categoria'>Hombres</span>
+            </div>
+            <span>
+                <b>Seleccionar cantidad:</b>
+            </span>
+            <div>
+                <button class="btn">-</button>
+                <span>1</span>
+                <button class="btn">+</button>
+            </div>
+        </div>
+    </div>
+    <div class="m-max"></div>
+    
+    <button class="btn" id="btn-create-h1">Crear h1</button>
+    <input placeholder="escribe un nombre para eliminar"  id="input">
+    <div id="contenedor"></div>
+    <script src="./script.js"></script>
+</body>
+</html>
