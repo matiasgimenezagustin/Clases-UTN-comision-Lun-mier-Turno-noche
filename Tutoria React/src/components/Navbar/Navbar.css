@@ -1,0 +1,11 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 5vw;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    gap: 5vw;
+}
