@@ -1,0 +1,35 @@
+.colorCardContainer{
+    width: 300px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.colorCard{
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.colorCard div:nth-child(1){
+    height: 100px;
+}
+.colorCard div:nth-child(2){
+    height: 80px;
+}
+.colorCard div:nth-child(3){
+    height: 60px;
+}
+.colorCard div:nth-child(4){
+    height: 40px;
+}
+.colorCardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colorCardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
