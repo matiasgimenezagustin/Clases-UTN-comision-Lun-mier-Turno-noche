@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .btn{
+            border-radius: 4px;
+            background-color: white;
+            padding: 10px 15px;
+            border: black solid 2px;
+        }
+        .code{
+            font-size: 20px;
+            font-weight: 500;
+            background-color: black;
+            border-radius: 10px;
+            padding: 3vh 3vw;
+            color: white;
+        }
+        h1{
+            font-size: 32px;
+            text-align: center;
+            text-decoration: underline black;
+            margin: 5vh 0;
+        }
+        body{
+            padding: 5vh 3vw;
+        }
+        .row{
+            display: flex;
+            margin: 5vh 0;
+            align-items: center;
+            gap: 50px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Contador simple</h1>
+    <div class="code">
+        Se debera crear el siguiente contador el cual no podra superar 10 y no debera ser inferior a 1
+    </div>
+    <div class="row">
+        <button class="btn">-</button>
+        <span>1</span>
+        <button class="btn">+</button>
+    </div>
+    <h1>Input con boton de enviar</h1>
+
+    <div class="code">
+        Se debera crear un input donde solo nos aparecera el boton de enviar aldado si el se escribio algo en el
+
+    </div>
+    <div class='row'>
+        <input type="text" placeholder="escriba un mensaje">
+    </div>
+
+    <div class='row'>
+        <input type="text" placeholder="escriba un mensaje" value="Hola">
+        <button>Enviar</button>
+    </div>
+
+    <h1>Lista de deseos</h1>
+    <div class="code">
+        Dado el siguiente array: <br>
+        const deseos = [
+            {deseo: 'terminar de aprender JS', id: 1},
+            {deseo: 'Aprender Typescript', id: 2},
+            {deseo: 'Aprender Express', id: 3},
+        ]
+        <br>
+        Se debera renderizar una carta como la siguiente y un boton que al presionarlo eliminara el deseo de la lista
+        
+    </div>
+    <div class="row">
+        <h3>Deseo: nombre del deseo</h3>
+        <button class="btn">Cumplido</button>
+    </div>
+    <div class="row">
+        <h3>Deseo: nombre del deseo</h3>
+        <button class="btn">Cumplido</button>
+    </div>
+    <div class="row">
+        <h3>Deseo: nombre del deseo</h3>
+        <button class="btn" >Cumplido</button>
+    </div>
+</body>
+</html>

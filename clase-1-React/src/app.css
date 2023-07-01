@@ -21,3 +21,28 @@ h1{
     align-items: center;
     gap: 50px;
 }
+
+
+.formularioUsuario{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    gap: 2vh;
+    margin: 0 auto;
+    margin-top: 20vh;
+}
+.formularioUsuario label{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.formularioUsuario input{
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+}
+
+button{
+    font-size: 24px;
+    padding: 10px;
+}
